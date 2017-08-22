@@ -15,7 +15,7 @@ app.get('/article-two', function (req, res) {
   res.send('Article two is required will be started here');
 });
 app.get('/article-three', function (req, res) {
-  res.sendFile('Article three is required and will be strted here');
+  res.send('Article three is required and will be strted here');
 });
 
 app.get('/ui/style.css', function (req, res) {
