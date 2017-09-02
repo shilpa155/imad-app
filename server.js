@@ -101,8 +101,10 @@ app.get('/ui/main.js', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
-app.get('/submit-name', function (req, res) {// get the name from request
-varname = req.params.name; //1000
+app.get('/submit-name', function (req, res) {
+    //URL:/submit-name?name=xxxx
+    // get the name from request
+var name = req.query.name; //1000
 
 vnames.push(name);
 //JSON: javascript object Notation
