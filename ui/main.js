@@ -16,6 +16,7 @@ var img = document.getElementById('madi');
 
 // counter code
 var button = document.getElementById('counter');
+var counter = 0;
 button.onClick = function () {
     //Make request to the endpoint
     
