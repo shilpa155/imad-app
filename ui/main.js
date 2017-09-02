@@ -45,8 +45,7 @@ button.onclick = function () {
     */
 };
 // submit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
 // make request tot theserver send the name
@@ -74,6 +73,8 @@ ul.innerHTML = list;
     };
     
     // make a request
+    var nameInput = document.getElementById('name');
+var name = nameInput.value;
     request.open('GET', 'http://reddyshilpa155.imad.hasura-app.io/submit-name?name=', + name, true);
     request.send(null);
 // capture the list of name and render it as list
