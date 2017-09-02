@@ -17,7 +17,7 @@ var img = document.getElementById('madi');
 // counter code
 var button = document.getElementById('counter');
 var counter = 0;
-button.onClick = function () {
+button.onclick = function () {
     //Make request to the endpoint
     
     //Capture the response store it in a variable
