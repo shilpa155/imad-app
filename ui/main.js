@@ -36,7 +36,7 @@ button.onclick = function () {
     };
     
     // make a request
-    request.open = ('GET' , 'http://reddyshilpa155.imad.hasura-app.io/counter' , true);
+    request.open('GET','http://reddyshilpa155.imad.hasura-app.io/counter',true);
     request.send(null);
     /* render the variable in the correct span
     counter = counter + 1;
