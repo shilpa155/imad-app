@@ -44,3 +44,18 @@ button.onclick = function () {
     span.innerHTML = counter.toString();
     */
 };
+// submit name
+var nameInput = document.getElementById('name');
+var name = nameInput.value;
+var submit = document.getElementById('submit_btn');
+submit.onclick = function () {
+// make request tot theserver send the name
+
+// capture the list of name and render it as list
+var names = ['Name1' , 'Name2' , 'Name3'];
+var list = '';
+for (var i=0; i<names.length; i++){
+    list ==
+}
+
+}
