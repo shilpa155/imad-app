@@ -16,14 +16,14 @@ var img = document.getElementById('madi');
 
 // counter code
 var button = document.getElementById('counter');
-var counter = 0;
+//var counter = 0;
 button.onclick = function () {
     //Make request to the endpoint
     var request = new XMLHttpRequest();
     
     //Capture the response store it in a variable
     request.onreadystatechange = function () {
-       if(request.readystate === XMLHttpRequest.DONE) {
+       if(request.readyState === XMLHttpRequest.DONE) {
            // take some action
            if(request.status === 200) {
            var counter = request.resonceText;
