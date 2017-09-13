@@ -120,7 +120,7 @@ res.send(JSON.stringify(names));
 app.get('/article/:articleName', function (req, res) {
     //articleName == article-one
     //article(articleName) == {} content object for article one
-    articleName = req.params.articleName;
+    //articleName = req.params.articleName;
     pool.query('SELECT * FROM article where title = ' +req.params.articleName, function(err,result){
         if(err){
             res.status(500).send(err.toString());
@@ -128,12 +128,11 @@ app.get('/article/:articleName', function (req, res) {
             if(result.rows.length === 0){
                 res.status(404).send('Article not found');
             } else {
-                var articleData = res(0);
+                var articleData = result.rows[0];
                 res.send(createTemplate(articleData));
             }
         }
     });
-    res.send(createTemplate(articleData));
   // res.send(createTemplate(articles[articleName]));
 });
 
