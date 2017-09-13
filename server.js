@@ -133,7 +133,7 @@ app.get('/article/:articleName', function (req, res) {
             }
         }
     });
-    res.send(createTemplate(articleData))
+    res.send(createTemplate(articleData));
   // res.send(createTemplate(articles[articleName]));
 });
 
