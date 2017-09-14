@@ -120,8 +120,9 @@ res.send(JSON.stringify(names));
 app.get('/articles/:articleName', function (req, res) {
     //articleName == article-one
     //article(articleName) == {} content object for article one
-    //articleName = req.params.articleName;
+    var articleName = req.params.articleName;
     //SELECE * FROM article WHERE title = article - one
+
     pool.query("SELECT * FROM articles where title = '"  + req.params.articleName + "'", function(err,result){
         if(err){
             res.status(500).send(err.toString());
