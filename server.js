@@ -37,7 +37,8 @@ var articles = {
     date : 'Sep 13 2017' ,
     content : 
     `<p>
-            This is content for my second article. `
+            This is content for my second article.
+            </p>`
 },
 'article-three' : {
      title : 'article-three | shilpa',
@@ -45,7 +46,7 @@ var articles = {
     date : 'Aug 17, 2017' ,
     content : 
     `<p>
-            This is content for my third article. `
+            This is content for my third article.</p> `
 }
 };
 function createTemplate (data){
@@ -122,7 +123,7 @@ app.get('/articles/:articleName', function (req, res) {
     //article(articleName) == {} content object for article one
     //var articleName = req.params.articleName;
     //SELECE * FROM article WHERE title = article - one
-
+//SELECE * FROM article WHERE title = '\';DELETE where a=\'afdf'
     pool.query("SELECT * FROM article WHERE title = '"  + req.params.articleName + "'", function(err,result){
         if(err){
             res.status(500).send(err.toString());
