@@ -90,7 +90,7 @@ var pool = new Pool(config);
 app.get('/test-db', function(req, res){
     //make a select request
     //return responce with the result
-    pool.query('SELECT * FROM test', function(err, result){
+    pool.query('SELECT * FROM test', function (err, result) {
        if(err){
            res.status(500).send(err.toString());
        } else {
@@ -120,7 +120,7 @@ res.send(JSON.stringify(names));
 app.get('/articles/:articleName', function (req, res) {
     //articleName == article-one
     //article(articleName) == {} content object for article one
-    var articleName = req.params.articleName;
+    //var articleName = req.params.articleName;
     //SELECE * FROM article WHERE title = article - one
 
     pool.query("SELECT * FROM articles where title = '"  + req.params.articleName + "'", function(err,result){
