@@ -93,7 +93,14 @@ app.get('/', function (req, res) {
 function hash (input, salt){
     //how we create hash?
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
-    return hashed.toString('hex');
+    return ["pbkdf2","10000", salt, hashed.toString('hex')];
+    //algorithm : md5
+    //passwod -> q8q2jnds885fsjf53wkokf
+    //this-is-random-string -> bhgygu2hfjtbn
+    //'passwod' -> 'password-this-is-salt'-> hash -> hash -> 10k times
+    
+    
+    
 }
 
 app.get('/hash/:input', function(req, res){
