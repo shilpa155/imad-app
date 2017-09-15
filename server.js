@@ -92,7 +92,7 @@ app.get('/', function (req, res) {
 
 function hash (input, salt){
     //how we create hash?
-    var hashed = crypto.pdkdf25ynk(input, salt, 10000, 512, 'sha512');
+    var hashed = crypto.pdkdf25ync(input, salt, 10000, 512, 'sha512');
     return hashed.toString('hex');
 }
 
