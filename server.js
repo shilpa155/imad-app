@@ -110,6 +110,7 @@ app.get('/hash/:input', function(req, res){
    
 app.post('create-user', function(req, res){
     //username , password 
+    //curl -XPOST -H 'Content-Type : application/json' --data '{"username": "shilpa", "password": "password"}' http://reddyshilpa155.imad.hasura-app.io/create-user
     //JSON 
     var username = req.body.username;
     var password = req.body.password;
@@ -122,7 +123,7 @@ app.post('create-user', function(req, res){
           // res.send(JSON.stringify(result.rows));
           res.send("user sucessfully created : " + username);
        }
-   })
+   });
 });
 
 
